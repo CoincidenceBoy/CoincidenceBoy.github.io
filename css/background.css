@@ -6,3 +6,15 @@
   /* 背景图像大小 */
   background-size: cover;
 }
+#web_bg {
+    background: linear-gradient(102.7deg,#fddaff 8.2%,#dfadfc 19.6%,#adcdfc 36.8%,#adfcf4 73.2%,#caf8d0 90.9%);
+}
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
