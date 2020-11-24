@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/11/23/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/2020/11/23/first/</url>
+    <content><![CDATA[<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="这是一个测试"><a href="#这是一个测试" class="headerlink" title="这是一个测试"></a>这是一个测试</h2>]]></content>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>字符串分割</title>
+    <url>/2020/11/24/test/</url>
+    <content><![CDATA[<script src='https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js'></script>
+
+<h1 id="This-is-a-test"><a href="#This-is-a-test" class="headerlink" title="This is a test."></a>This is a test.</h1><h2 id="1-c"><a href="#1-c" class="headerlink" title="1. c++"></a>1. c++</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> mamespace <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-ctrl-shift-1"><a href="#2-ctrl-shift-1" class="headerlink" title="2.  ctrl + shift + 1"></a>2.  ctrl + shift + 1</h2><p>==显示大纲==</p>
+<h2 id="3-字体"><a href="#3-字体" class="headerlink" title="3.  字体"></a>3.  字体</h2><p><strong>ctrl b</strong></p>
+<p>==ctrl q==</p>
+<p>删除线 两个~~            <del>我的？</del></p>
+<p>斜体两个*     <em>？</em></p>
+<h2 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h2><blockquote>
+<p>作者：sorrymaker</p>
+<blockquote>
+<p>作者：sorrymaker</p>
+<blockquote>
+<p>作者：sorrymaker</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="5-分割线"><a href="#5-分割线" class="headerlink" title="5. 分割线"></a>5. 分割线</h2><p>三个 -</p>
+<p>三个*</p>
+<hr>
+<h2 id="6-图片插入"><a href="#6-图片插入" class="headerlink" title="6. 图片插入"></a>6. 图片插入</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在线图片 本地图片</span></span><br><span class="line">![]()</span><br><span class="line">![seraphine](https:<span class="comment">//i0.hdslb.com/bfs/article/b88bf75f2835b3654a590f517bf66698d7701951.jpg@1320w_1680h.webp)</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i0.hdslb.com/bfs/article/b88bf75f2835b3654a590f517bf66698d7701951.jpg@1320w_1680h.webp" alt="seraphine"></p>
+<h2 id="7-超链接"><a href="#7-超链接" class="headerlink" title="7.超链接"></a>7.超链接</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">[]()</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/">My_github</a></p>
+<h2 id="8-列表"><a href="#8-列表" class="headerlink" title="8.列表"></a>8.列表</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">//无序列表</span></span><br><span class="line">- </span><br><span class="line"><span class="comment">//有序列表</span></span><br><span class="line"><span class="number">1.</span> </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>目录1</li>
+<li>目录2</li>
+<li>目录3</li>
+</ul>
+<ol>
+<li>我的</li>
+<li>你的</li>
+<li>他的</li>
+</ol>
+<h2 id="9-表格"><a href="#9-表格" class="headerlink" title="9.表格"></a>9.表格</h2><table>
+<thead>
+<tr>
+<th align="center">成绩</th>
+<th align="center">语文</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>sstream+getline</tag>
+      </tags>
+  </entry>
+</search>
