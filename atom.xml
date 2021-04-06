@@ -99,7 +99,7 @@
     <link href="https://coincidenceboy.github.io/2021/02/02/java%E5%9F%BA%E7%A1%8002/"/>
     <id>https://coincidenceboy.github.io/2021/02/02/java%E5%9F%BA%E7%A1%8002/</id>
     <published>2021-02-02T00:38:20.000Z</published>
-    <updated>2021-02-03T04:02:38.285Z</updated>
+    <updated>2021-02-03T14:33:49.686Z</updated>
     
     <content type="html"><![CDATA[<script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><img src="/2021/02/02/java%E5%9F%BA%E7%A1%8002/2.png" alt="image-20210202091737459"></p><h1 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h1><p><img src="/2021/02/02/java%E5%9F%BA%E7%A1%8002/3.png" alt="image-20210202102825432"></p><h1 id="内存分析"><a href="#内存分析" class="headerlink" title="内存分析"></a>内存分析</h1><p><img src="/2021/02/02/java%E5%9F%BA%E7%A1%8002/4.png" alt="image-20210203085950196"></p><img src="/2021/02/02/java%E5%9F%BA%E7%A1%8002/5.png" alt="image-20210203090738883" style="zoom:80%;"><blockquote><p><strong>数组</strong> 属于引用类型,数组也可以看成对象,数组中每个元素相当于该对象的成员变量.</p><p>数组对象本身是在堆中 . </p></blockquote><h2 id="java传递参数"><a href="#java传递参数" class="headerlink" title="java传递参数"></a>java传递参数</h2><p><img src="/2021/02/02/java%E5%9F%BA%E7%A1%8002/6.png" alt="image-20210203120026000"></p><blockquote><p>结合上述内存分析 , 传参用到的是 <strong>栈</strong> 来实现的. (栈里保存了基本变量具体数值 和 引用变量的地址.)</p></blockquote>]]></content>
     
