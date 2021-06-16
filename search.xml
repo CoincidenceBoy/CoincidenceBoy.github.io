@@ -1,6 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>first-django-pj</title>
+    <url>/2021/05/08/first-django-pj/</url>
+    <content><![CDATA[<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p><img src="/2021/05/08/first-django-pj/1-1.png" alt="image-20210508194921248"></p>
+<p><img src="/2021/05/08/first-django-pj/1-2.png" alt="image-20210508195430245"></p>
+<p><img src="/2021/05/08/first-django-pj/1-3.png" alt="image-20210508195616051"></p>
+<h2 id="创建poll应用"><a href="#创建poll应用" class="headerlink" title="创建poll应用"></a>创建poll应用</h2><blockquote>
+<p>django中,每个应用都是一个python包,并且遵循相同的约定.  </p>
+<p>并且可以在创建应用的时候生成基础的目录结构.</p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/1-4.png" alt="image-20210508195927003"></p>
+<p><img src="/2021/05/08/first-django-pj/1-5.png" alt="image-20210508200022857"></p>
+<p><img src="/2021/05/08/first-django-pj/1-6.png" alt="image-20210508200119654"></p>
+<h1 id="编写第一个视图"><a href="#编写第一个视图" class="headerlink" title="编写第一个视图"></a>编写第一个视图</h1><p><img src="/2021/05/08/first-django-pj/2-1.png" alt="image-20210508200232486"></p>
+<blockquote>
+<p>如果想看到效果的话 , 需要一个<strong>URL</strong>映射到它 ——–  所以我们需要一个URLconf</p>
+</blockquote>
+<ol>
+<li><p>在 <strong><em>polls/</em></strong> 新建一个 <strong><em>urls.py</em></strong></p>
+</li>
+<li><p>输入如下代码<img src="/2021/05/08/first-django-pj/2-2.png" alt="image-20210508200809551"></p>
+</li>
+<li><p>在根URLconf( <strong><em>mysite/urls.py</em></strong> )中指定我们的polls.urls模块.<img src="/2021/05/08/first-django-pj/2-3.png" alt="image-20210508201222004"></p>
+<p><img src="/2021/05/08/first-django-pj/2-5.png" alt="image-20210508201816134"></p>
+<img src="/2021/05/08/first-django-pj/2-6.png" alt="image-20210508201844470" style="zoom:50%;">
+
+<p><img src="/2021/05/08/first-django-pj/2-7.png" alt="image-20210508202155269"></p>
+</li>
+</ol>
+<blockquote>
+<p>函数 <strong>include()</strong> 允许引入其他URLconfs.</p>
+<p>每当django遇到 <strong>include()</strong> 时, 会截断与此项匹配的URL部分, 并将剩余的字符串发送到URLconf(此处指的是 <strong><em>mysite/urls.py</em></strong> )以供处理.</p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/2-4.png" alt="image-20210508201552521"></p>
+<h1 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h1><h2 id="修改语言和时区"><a href="#修改语言和时区" class="headerlink" title="修改语言和时区"></a>修改语言和时区</h2><p><img src="/2021/05/08/first-django-pj/2-8.png" alt="image-20210508202358422"></p>
+<h2 id="INSTALLED-APPS"><a href="#INSTALLED-APPS" class="headerlink" title="INSTALLED_APPS"></a>INSTALLED_APPS</h2><p><img src="/2021/05/08/first-django-pj/2-9.png" alt="image-20210508202814084"></p>
+<blockquote>
+<p>默认开启的某些应用(例如admin) 需要至少一个数据表(存储admin账户密码等) , 所以要在数据库中创建一些表</p>
+</blockquote>
+<h2 id="migrate命令-创建表"><a href="#migrate命令-创建表" class="headerlink" title="migrate命令 创建表"></a>migrate命令 创建表</h2><p><img src="/2021/05/08/first-django-pj/2-10.png" alt="image-20210508203005384"></p>
+<p><img src="/2021/05/08/first-django-pj/2-11.png" alt="image-20210508203507432"></p>
+<img src="/2021/05/08/first-django-pj/2-12.png" alt="image-20210508203604286" style="zoom:80%;">
+
+<h2 id="创建模型-数据库中的table"><a href="#创建模型-数据库中的table" class="headerlink" title="创建模型(数据库中的table)"></a>创建模型(数据库中的table)</h2><blockquote>
+<p>首先分析 : 我们需要两个表 一个 <strong>Quesion</strong>( 问题描述和发布时间 ) , 一个<strong>Choice</strong>( 有两个字段，选项描述和当前得票数。每个选项属于一个问题[这里用外键来实现] )</p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/2-13.png" alt="image-20210508203850346"></p>
+<h2 id="激活模型-由python类—-gt-应用数据库"><a href="#激活模型-由python类—-gt-应用数据库" class="headerlink" title="激活模型(由python类—&gt;应用数据库)"></a>激活模型(由python类—&gt;应用数据库)</h2><p><img src="/2021/05/08/first-django-pj/2-14.png" alt="image-20210508204349278"></p>
+<p><img src="/2021/05/08/first-django-pj/2-15.png" alt="image-20210508204425109"></p>
+<p><img src="/2021/05/08/first-django-pj/2-16.png" alt="image-20210508204800531"></p>
+<p><img src="/2021/05/08/first-django-pj/2-17.png" alt="image-20210508204857087"></p>
+<img src="/2021/05/08/first-django-pj/2-19.png" alt="image-20210508205233465" style="zoom:67%;">
+
+<h3 id="总结—数据库修改"><a href="#总结—数据库修改" class="headerlink" title="总结—数据库修改"></a>总结—数据库修改</h3><p><img src="/2021/05/08/first-django-pj/2-18.png" alt="image-20210508205002664"></p>
+<h1 id="django的管理界面"><a href="#django的管理界面" class="headerlink" title="django的管理界面"></a>django的管理界面</h1><h2 id="创建一个管理员账户"><a href="#创建一个管理员账户" class="headerlink" title="创建一个管理员账户"></a>创建一个管理员账户</h2><p><img src="/2021/05/08/first-django-pj/3-1.png" alt="image-20210509080346195"></p>
+<h2 id="启动开发服务器"><a href="#启动开发服务器" class="headerlink" title="启动开发服务器"></a>启动开发服务器</h2><p><img src="/2021/05/08/first-django-pj/3-2.png" alt="image-20210509080539096"></p>
+<p><img src="/2021/05/08/first-django-pj/3-3.png" alt="image-20210509080505588"></p>
+<h2 id="管理站点页面"><a href="#管理站点页面" class="headerlink" title="管理站点页面"></a>管理站点页面</h2><p><img src="/2021/05/08/first-django-pj/3-4.png" alt="image-20210509080728696"></p>
+<blockquote>
+<p> 关于用户权限</p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/3-5.png" alt="image-20210509080855415"></p>
+<p><img src="/2021/05/08/first-django-pj/3-6.png" alt="image-20210509080922400"></p>
+<h2 id="向管理页面中加入polls应用"><a href="#向管理页面中加入polls应用" class="headerlink" title="向管理页面中加入polls应用"></a>向管理页面中加入polls应用</h2><p><img src="/2021/05/08/first-django-pj/3-7.png" alt="image-20210509081020075"></p>
+<p><img src="/2021/05/08/first-django-pj/3-9.png" alt="image-20210509082054055"></p>
+<p><img src="/2021/05/08/first-django-pj/3-8.png" alt="image-20210509081343426"></p>
+<h1 id="Django视图"><a href="#Django视图" class="headerlink" title="Django视图"></a>Django视图</h1><h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><blockquote>
+<p>Django视图的概念是 [一类具有相同功能和模板的<strong>网页的集合</strong>]</p>
+<p>在Django中, 网页和其他内容都是从视图派生而来的.</p>
+<p>每个视图表现为一个Python函数, Django 将会根据用户请求的 URL 来选择使用哪个视图（更准确的说，是根据 URL 中域名之后的部分）</p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/4-1.png" alt="image-20210509082259498"></p>
+<p><img src="/2021/05/08/first-django-pj/4-2.png" alt="image-20210509082517297"></p>
+<h2 id="编写更多视图"><a href="#编写更多视图" class="headerlink" title="编写更多视图"></a>编写更多视图</h2><h2 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h2><p><img src="/2021/05/08/first-django-pj/4-3.png" alt="image-20210509082831410"></p>
+<p><img src="/2021/05/08/first-django-pj/4-4.png" alt="image-20210509082901320"></p>
+<p><img src="/2021/05/08/first-django-pj/4-5.png" alt="image-20210509083015415"></p>
+<blockquote>
+<p>思考为什么会完成跳转?</p>
+</blockquote>
+<ol>
+<li>当某人请求您网页的某一页面时, 比如说”/polls/34/“ ,Django会载入mysite.urls 模块, 因为这在配置项 <code>ROOT_URLCONF</code>中设置了。</li>
+</ol>
+<p><img src="/2021/05/08/first-django-pj/4-6.png" alt="image-20210509083410300"></p>
+<p><img src="/2021/05/08/first-django-pj/4-7.png" alt="image-20210509083553196"></p>
+<ol start="2">
+<li><p>然后 Django 寻找名为<code>urlpatterns</code>变量并且按序匹配正则表达式. </p>
+</li>
+<li><p>在找到匹配项 <code>polls/</code>，它切掉了匹配的文本（<code>polls/</code>），将剩余文本——<code>34/</code>，发送至 <strong><em>‘polls.urls’</em></strong> 做进一步处理。</p>
+</li>
+</ol>
+<p><img src="/2021/05/08/first-django-pj/4-8.png" alt="image-20210509083813472"></p>
+<ol start="4">
+<li>在这里剩余文本匹配了 <code>&#39;&lt;int:question_id&gt;/&#39;</code>，使得我们 Django 以如下形式调用 <code>detail()</code>:</li>
+</ol>
+<p><img src="/2021/05/08/first-django-pj/4-9.png" alt="image-20210509084033738"></p>
+<p><strong>此时</strong> <img src="/2021/05/08/first-django-pj/4-10.png" alt="image-20210509084106416"></p>
+<blockquote>
+<p><code>question_id=34</code> 由 <code>&lt;int:question_id&gt;</code> 匹配生成。使用尖括号“捕获”这部分 URL，且以关键字参数的形式发送给视图函数。</p>
+</blockquote>
+<h2 id="index视图"><a href="#index视图" class="headerlink" title="index视图"></a>index视图</h2><p><img src="/2021/05/08/first-django-pj/4-11.png" alt="4-11"></p>
+<p><img src="/2021/05/08/first-django-pj/4-12.png" alt="image-20210509090013339"></p>
+<blockquote>
+<p>这里有个严重的问题是 , 页面的设计是写死在 视图函数index()里面的. [应该是由前端html等完成的].</p>
+<blockquote>
+<p>这里我们使用 Django 的模板系统，只要创建一个视图，就可以将页面的设计从代码中分离出来。</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>在你的 <code>polls</code> 目录里创建一个 <code>templates</code> 目录。Django 将会在这个目录里查找模板文件</li>
+</ol>
+<blockquote>
+<p>你项目的 <code>TEMPLATES</code> 配置项描述了 Django 如何载入和渲染模板。默认的设置文件设置了 <code>DjangoTemplates</code> 后端，并将 <code>APP_DIRS</code>设置成了 <code>True</code>。</p>
+<p><img src="/2021/05/08/first-django-pj/4-13.png" alt="image-20210509090527159"></p>
+</blockquote>
+<ol start="2">
+<li><p><img src="/2021/05/08/first-django-pj/4-14.png" alt="image-20210509090830771"></p>
+</li>
+</ol>
+<p><img src="/2021/05/08/first-django-pj/4-15.png" alt="image-20210509090926608"></p>
+<ol start="3">
+<li><p><img src="/2021/05/08/first-django-pj/4-16.png" alt="image-20210509091112818"></p>
+</li>
+<li><p>更新<code>polls/views.py</code> 里的 <code>index</code> 视图来使用模板 : </p>
+</li>
+</ol>
+<p><img src="/2021/05/08/first-django-pj/4-17.png" alt="image-20210509091329708"></p>
+<p><img src="/2021/05/08/first-django-pj/4-18.png" alt="image-20210509092610067"></p>
+<h2 id="polls详情视图"><a href="#polls详情视图" class="headerlink" title="polls详情视图"></a>polls详情视图</h2><p><img src="/2021/05/08/first-django-pj/4-19.png" alt="image-20210509092920383"></p>
+<blockquote>
+<p>这里有个新原则。如果指定问题 ID 所对应的问题不存在，这个视图就会抛出一个 <a href="https://docs.djangoproject.com/zh-hans/3.2/topics/http/views/#django.http.Http404"><code>Http404</code></a> 异常。</p>
+</blockquote>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><img src="/2021/05/08/first-django-pj/4-20.png" alt="image-20210509093103836" style="zoom:50%;">                             <img src="/2021/05/08/first-django-pj/4-21.png" alt="image-20210509093141427" style="zoom:50%;">        </p>
+<p><img src="/2021/05/08/first-django-pj/4-22.png" alt="image-20210509093621301"></p>
+<h3 id="使用模板系统"><a href="#使用模板系统" class="headerlink" title="使用模板系统"></a>使用模板系统</h3><p><img src="/2021/05/08/first-django-pj/4-23.png" alt="image-20210509093812215"></p>
+<p><img src="/2021/05/08/first-django-pj/4-24.png" alt="image-20210509093913519"></p>
+<h3 id="去除模板中的硬编码URL"><a href="#去除模板中的硬编码URL" class="headerlink" title="去除模板中的硬编码URL"></a>去除模板中的硬编码URL</h3><p><img src="/2021/05/08/first-django-pj/4-25.png" alt="image-20210509094535923"></p>
+<h4 id="更易修改-URL"><a href="#更易修改-URL" class="headerlink" title="更易修改 URL"></a>更易修改 URL</h4><p><img src="/2021/05/08/first-django-pj/4-26.png" alt="image-20210509094729480"></p>
+<p><img src="/2021/05/08/first-django-pj/4-27.png" alt="image-20210509094909546"></p>
+<img src="/2021/05/08/first-django-pj/4-28.png" alt="image-20210509094942847" style="zoom:50%;">
+
+<h3 id="为-URL-名称添加命名空间"><a href="#为-URL-名称添加命名空间" class="headerlink" title="为 URL 名称添加命名空间"></a>为 URL 名称添加命名空间</h3><p><img src="/2021/05/08/first-django-pj/4-29.png" alt="image-20210509095215902"></p>
+<p><img src="/2021/05/08/first-django-pj/4-30.png" alt="image-20210509095405049"></p>
+<h3 id="编写一个简单的表单-lt-form-gt"><a href="#编写一个简单的表单-lt-form-gt" class="headerlink" title="编写一个简单的表单 &lt; form &gt;"></a>编写一个简单的表单 &lt; form &gt;</h3><p><img src="/2021/05/08/first-django-pj/4-32.png" alt="image-20210509095906418"></p>
+<p><img src="/2021/05/08/first-django-pj/4-31.png" alt="image-20210509095846137"></p>
+<h2 id="polls投票视图"><a href="#polls投票视图" class="headerlink" title="polls投票视图"></a>polls投票视图</h2><blockquote>
+<p>用于处理提交的数据</p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/4-33.png" alt="image-20210509101228282"></p>
+<p><img src="/2021/05/08/first-django-pj/4-34.png" alt="image-20210509101318814"></p>
+<p><img src="/2021/05/08/first-django-pj/4-35.png" alt="image-20210509101348249"></p>
+<blockquote>
+<p>跳转后显示界面<strong>polls/results.html</strong></p>
+</blockquote>
+<p><img src="/2021/05/08/first-django-pj/4-36.png" alt="image-20210509101442018"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Student-system</title>
     <url>/2021/04/28/Student-system/</url>
     <content><![CDATA[<script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script>
